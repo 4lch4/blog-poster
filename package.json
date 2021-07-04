@@ -44,7 +44,7 @@
   "keywords": [
     "oclif"
   ],
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
     "bin": "blog-poster"
