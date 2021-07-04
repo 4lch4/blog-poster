@@ -1,0 +1,59 @@
+{
+  "name": "@4lch4/blog-poster",
+  "description": "A CLI utility for creating the base of a new Blog post file.",
+  "version": "0.0.0",
+  "author": "4lch4 @4lch4",
+  "bin": {
+    "blog-poster": "./bin/run"
+  },
+  "bugs": "https://github.com/4lch4/blog-poster/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "enquirer": "^2.3.6",
+    "filenamify": "^4.3.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.1",
+    "prompts": "^2.4.1",
+    "sanitize-filename": "^1.6.3",
+    "slugify": "^1.5.3",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@types/chai": "^4",
+    "@types/fs-extra": "^9.0.11",
+    "@types/mocha": "^5",
+    "@types/node": "^16",
+    "chai": "^4",
+    "mocha": "^5",
+    "nyc": "^14",
+    "ts-node": "^8",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/4lch4/blog-poster",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "blog-poster"
+  },
+  "repository": "4lch4/blog-poster",
+  "scripts": {
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
